@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco-MaxiDeka - Guia de Reciclagem</title>
+  <style>
+    :root {
+      --primary-color: #6BA53A;
+      --secondary-color: #4D7F2F;
+      --bg-light: #F4F7F2;
+      --text-dark: #2C3E2E;
+      --white: #FFFFFF;
+      --border-radius: 12px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background-color: var(--bg-light); color: var(--text-dark); display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+
+    .app-container {
+      width: 100%; max-width: 420px; height: 100vh; max-height: 880px;
+      background: var(--white); display: flex; flex-direction: column;
+      position: relative; box-shadow: 0 10px 25px rgba(0,0,0,0.08); overflow: hidden; border-radius: 16px;
+    }
+
+    .app-header {
+      padding: 16px 20px; background: var(--white); border-bottom: 1px solid #F0F0F0;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .app-header h2 { color: var(--secondary-color); font-size: 1.2rem; }
+    .back-btn { background: none; border: none; font-size: 1.2rem; cursor: pointer; color: var(--secondary-color); }
+
+    .content-area { padding: 20px; overflow-y: auto; flex: 1; }
+
+    /* Lista de Categorias */
+    .category-card {
+      background: #F9FBF8; border: 1px solid #E8EFE5; border-radius: var(--border-radius);
+      padding: 16px; margin-bottom: 16px;
+    }
+    .category-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .category-icon { font-size: 1.8rem; }
+    .category-title { font-size: 1.1rem; color: var(--secondary-color); }
+
+    .steps-list { list-style: none; padding-left: 5px; }
+    .steps-list li {
+      font-size: 0.85rem; color: #555; margin-bottom: 6px; position: relative; padding-left: 18px;
+    }
+    .steps-list li::before {
+      content: "✔"; position: absolute; left: 0; color: var(--primary-color); font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="app-container">
+    <header class="app-header">
+      <button class="back-btn" onclick="window.location.href='home.html'">← Voltar</button>
+      <h2>Guia de Descarte</h2>
+      <div></div>
+    </header>
+
+    <div class="content-area">
+
+      <!-- Plástico -->
+      <div class="category-card">
+        <div class="category-header">
+          <span class="category-icon">♻️</span>
+          <h3 class="category-title">Plástico</h3>
+        </div>
+        <ul class="steps-list">
+          <li>Lave embalagens para retirar restos de alimento.</li>
+          <li>Retire tampas e rótulos quando possível.</li>
+          <li>Amapasse garrafas PET para economizar espaço.</li>
+        </ul>
+      </div>
+
+      <!-- Papel -->
+      <div class="category-card">
+        <div class="category-header">
+          <span class="category-icon">📄</span>
+          <h3 class="category-title">Papel e Papelão</h3>
+        </div>
+        <ul class="steps-list">
+          <li>Mantenha o papel limpo e seco.</li>
+          <li>Desdobre e dobre caixas de papelão.</li>
+          <li>Evite rasgar em pedaços muito pequenos.</li>
+        </ul>
+      </div>
+
+      <!-- Vidro -->
+      <div class="category-card">
+        <div class="category-header">
+          <span class="category-icon">🍾</span>
+          <h3 class="category-title">Vidro</h3>
+        </div>
+        <ul class="steps-list">
+          <li>Lave bem os frascos e garrafas.</li>
+          <li>Embrulhe vidros quebrados em jornal ou papelão.</li>
+          <li>Identifique o pacote para segurança dos coletores.</li>
+        </ul>
+      </div>
+
+      <!-- Baterias e Eletrônicos -->
+      <div class="category-card">
+        <div class="category-header">
+          <span class="category-icon">🔋</span>
+          <h3 class="category-title">Baterias e Eletrônicos</h3>
+        </div>
+        <ul class="steps-list">
+          <li>Nunca descarte no lixo comum doméstico.</li>
+          <li>Armazene em local seco até levar ao ponto de coleta.</li>
+          <li>Proteja os polos de pilhas com fita isolante.</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco-MaxiDeka - Perfil</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    :root {
+      --primary-color: #6BA53A;
+      --secondary-color: #4D7F2F;
+      --bg-light: #F4F7F2;
+      --text-dark: #2C3E2E;
+      --white: #FFFFFF;
+      --border-radius: 12px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background-color: var(--bg-light); color: var(--text-dark); display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+    
+    .app-container {
+      width: 100%; max-width: 420px; height: 100vh; max-height: 880px;
+      background: var(--white); display: flex; flex-direction: column;
+      position: relative; box-shadow: 0 10px 25px rgba(0,0,0,0.08); overflow: hidden; border-radius: 16px;
+    }
+
+    .app-header {
+      padding: 20px;
+      background: var(--white);
+      border-bottom: 1px solid #F0F0F0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .app-header h2 {
+      color: var(--secondary-color);
+      font-size: 1.25rem;
+    }
+
+    .content-area {
+      padding: 20px;
+      overflow-y: auto;
+      flex: 1;
+      text-align: center;
+      padding-bottom: 80px;
+    }
+
+    .profile-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: #E8EFE5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      margin: 10px auto 15px auto;
+    }
+
+    .btn-logout {
+      background: #e74c3c;
+      color: var(--white);
+      padding: 14px;
+      border: none;
+      border-radius: var(--border-radius);
+      width: 100%;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 30px;
+    }
+
+    /* BARRA DE NAVEGAÇÃO INFERIOR */
+    .bottom-nav {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 65px;
+      background: var(--white);
+      border-top: 1px solid #E0E0E0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .nav-item {
+      background: none;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 0.75rem;
+      color: #666;
+      cursor: pointer;
+      gap: 3px;
+    }
+
+    .nav-item.active {
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+
+    .nav-item .nav-icon {
+      font-size: 1.3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="app-container">
+    <header class="app-header">
+      <h2>Meu Perfil</h2>
+      <span>🌱 120 pts</span>
+    </header>
+
+    <div class="content-area">
+      <div class="perfil-avatar">👤</div>
+      <h3 id="user-name">Usuário Eco</h3>
+      <p id="user-email" style="color: #666; font-size: 0.9rem; margin-top: 4px;">elbomberocolaborador1@gmail.com</p>
+
+      <!-- BOTÃO DE SAIR -> VOLTA PARA O LOGIN -->
+      <button class="btn-logout" onclick="window.location.href='login.html'">
+        Sair da Conta
+      </button>
+    </div>
+
+    <!-- MENU INFERIOR DE NAVEGAÇÃO -->
+    <nav class="bottom-nav">
+      <!-- Botão Início -->
+      <button class="nav-item" onclick="window.location.href='home.html'">
+        <span class="nav-icon">🏠</span>
+        <span>Início</span>
+      </button>
+
+      <!-- Botão Categorias -->
+      <button class="nav-item" onclick="window.location.href='categories.html'">
+        <span class="nav-icon">📦</span>
+        <span>Categorias</span>
+      </button>
+
+      <!-- Botão Escanear -->
+      <button class="nav-item" onclick="window.location.href='scanner.html'">
+        <span class="nav-icon">📷</span>
+        <span>Escanear</span>
+      </button>
+
+      <!-- Botão Perfil (Ativo) -->
+      <button class="nav-item active" onclick="window.location.href='perfil.html'">
+        <span class="nav-icon">👤</span>
+        <span>Perfil</span>
+      </button>
+    </nav>
+  </main>
+
+</body>
+</html>

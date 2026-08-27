@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco-MaxiDeka - Cadastro</title>
+  <style>
+    :root {
+      --primary-color: #6BA53A;
+      --secondary-color: #4D7F2F;
+      --bg-light: #F4F7F2;
+      --text-dark: #2C3E2E;
+      --white: #FFFFFF;
+      --border-radius: 12px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background-color: var(--bg-light); color: var(--text-dark); display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+
+    .app-container {
+      width: 100%; max-width: 420px; height: 100vh; max-height: 880px;
+      background: var(--white); display: flex; flex-direction: column;
+      position: relative; box-shadow: 0 10px 25px rgba(0,0,0,0.08); overflow: hidden; border-radius: 16px;
+    }
+
+    .auth-container { padding: 40px 24px; display: flex; flex-direction: column; justify-content: center; height: 100%; }
+    .auth-title { font-size: 1.8rem; color: var(--secondary-color); margin-bottom: 8px; }
+    .auth-subtitle { color: #666; margin-bottom: 30px; font-size: 0.95rem; }
+
+    .input-field { width: 100%; padding: 14px; border: 1px solid #E0E0E0; border-radius: var(--border-radius); margin-bottom: 15px; font-size: 0.95rem; outline: none; }
+    .input-field:focus { border-color: var(--primary-color); }
+
+    .btn { background: var(--primary-color); color: var(--white); padding: 14px; border: none; border-radius: var(--border-radius); width: 100%; font-size: 1rem; font-weight: 600; cursor: pointer; }
+    .btn:hover { background: var(--secondary-color); }
+    .auth-footer { margin-top: 25px; text-align: center; font-size: 0.9rem; color: #666; }
+    .auth-footer a { color: var(--primary-color); text-decoration: none; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <main class="app-container">
+    <div class="auth-container">
+      <h2 class="auth-title">Criar Conta</h2>
+      <p class="auth-subtitle">Junte-se à nossa comunidade sustentável.</p>
+      <div class="auth-footer">
+      Já tem uma conta? <a href="login.html">Faça login</a>
+      </div>
+      <form id="signupForm" onsubmit="event.preventDefault(); alert('Conta criada!'); window.location.href='login.html';">
+        <input type="text" class="input-field" placeholder="Nome completo" required>
+        <input type="email" class="input-field" placeholder="E-mail" required>
+        <input type="password" class="input-field" placeholder="Senha" required>
+        <button type="submit" class="btn">Cadastrar</button>
+      </form>
+
+      <div class="auth-footer">
+        Já tem uma conta? <a href="login.html">Entrar</a>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
