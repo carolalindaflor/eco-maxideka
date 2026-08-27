@@ -1,4 +1,6 @@
-♻️ EcoMaxiDeka
+
+Markdown
+# ♻️ EcoMaxiDeka
 
 > Tecnologia para incentivar a reciclagem, promover a sustentabilidade e transformar pequenas atitudes em grandes impactos.
 
@@ -150,6 +152,10 @@ O EcoMaxiDeka foi pensado para oferecer uma experiência:
 🌱 Focada em sustentabilidade;
 🚀 Simples e intuitiva.
 📂 Estrutura do Projeto
+
+
+
+
 O EcoMaxiDeka busca contribuir para uma cultura de maior responsabilidade ambiental através da tecnologia.
 
 A ideia central é mostrar que pequenas ações individuais podem gerar impactos positivos quando muitas pessoas participam.
